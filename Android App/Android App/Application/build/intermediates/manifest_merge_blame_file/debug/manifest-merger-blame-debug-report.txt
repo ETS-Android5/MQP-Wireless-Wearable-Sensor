@@ -1,0 +1,300 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright 2013 The Android Open Source Project
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9     http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16
+17         android:theme="@android:style/Theme.Holo.Light"
+18-->
+19<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+20    package="com.example.android.bluetoothlegatt"
+21    android:versionCode="1"
+22    android:versionName="1.0" >
+23
+24    <uses-sdk
+25        android:minSdkVersion="24"
+25-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+26        android:targetSdkVersion="28" />
+26-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+27
+28    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+29
+30
+31    <!--
+32    Declare this required feature if you want to make the app available to BLE-capable
+33    devices only.  If you want to make your app available to devices that don't support BLE,
+34    you should omit this in the manifest.  Instead, determine BLE capability by using
+35    PackageManager.hasSystemFeature(FEATURE_BLUETOOTH_LE)
+36    -->
+37    <uses-feature
+37-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:5-89
+38        android:name="android.hardware.bluetooth_le"
+38-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:19-63
+39        android:required="true" />
+39-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:64-87
+40
+41    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+41-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:5-81
+41-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:35:22-78
+42    <uses-permission android:name="android.permission.BLUETOOTH" />
+42-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:36:5-67
+42-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:36:22-65
+43    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+43-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:37:5-73
+43-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:37:22-71
+44
+45    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+46    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+47    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+47-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:25:5-79
+47-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:25:22-76
+48    <uses-permission android:name="android.permission.INTERNET" />
+48-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:26:5-67
+48-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:26:22-64
+49    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+49-->[com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\0526cb993bcd3b17a19f28f783b8b1d9\play-services-measurement-api-17.2.2\AndroidManifest.xml:24:5-68
+49-->[com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\0526cb993bcd3b17a19f28f783b8b1d9\play-services-measurement-api-17.2.2\AndroidManifest.xml:24:22-65
+50    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+50-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:26:5-82
+50-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:26:22-79
+51    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+51-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:26:5-110
+51-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:26:22-107
+52
+53    <application
+53-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:39:5-75:19
+54        android:appComponentFactory="@string/app_name"
+54-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:43:9-55
+55        android:debuggable="true"
+56        android:extractNativeLibs="false"
+57        android:icon="@drawable/ic_launcher"
+57-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:40:9-45
+58        android:label="@string/app_name"
+58-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:39:18-50
+59        android:testOnly="true"
+60        android:theme="@android:style/Theme.Holo.Light" >
+60-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:41:9-56
+61        <activity
+61-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:44:9-50:20
+62            android:name="com.example.android.bluetoothlegatt.DeviceScanActivity"
+62-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:44:19-53
+63            android:label="@string/app_name" >
+63-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:45:13-45
+64            <intent-filter>
+64-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:46:13-49:29
+65                <action android:name="android.intent.action.MAIN" />
+65-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:47:17-68
+65-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:47:25-66
+66
+67                <category android:name="android.intent.category.LAUNCHER" />
+67-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:48:17-76
+67-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:48:27-74
+68            </intent-filter>
+69        </activity>
+70        <activity android:name="com.example.android.bluetoothlegatt.DeviceControlActivity" />
+70-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:51:9-58
+70-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:51:19-56
+71
+72        <service
+72-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:52:9-77
+73            android:name="com.example.android.bluetoothlegatt.BluetoothLeService"
+73-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:52:18-52
+74            android:enabled="true" />
+74-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:52:53-75
+75
+76        <activity
+76-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:53:9-54:46
+77            android:name="com.example.android.bluetoothlegatt.graphs.RRGraphActivity"
+77-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:53:19-57
+78            android:theme="@style/AppTheme" />
+78-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:54:13-44
+79        <activity
+79-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:55:9-56:46
+80            android:name="com.example.android.bluetoothlegatt.HRVGraphActivity"
+80-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:55:19-51
+81            android:theme="@style/AppTheme" />
+81-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:56:13-44
+82        <activity
+82-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:57:9-58:46
+83            android:name="com.example.android.bluetoothlegatt.graphs.HeartRateGraphActivity"
+83-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:57:19-64
+84            android:theme="@style/AppTheme" />
+84-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:58:13-44
+85        <activity
+85-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:59:9-60:46
+86            android:name="com.example.android.bluetoothlegatt.graphs.SP02GraphActivity"
+86-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:59:19-59
+87            android:theme="@style/AppTheme" />
+87-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:60:13-44
+88        <activity
+88-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:61:9-62:46
+89            android:name="com.example.android.bluetoothlegatt.graphs.LongHRVGraphActivity"
+89-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:61:19-62
+90            android:theme="@style/AppTheme" />
+90-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:62:13-44
+91        <activity
+91-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:63:9-64:46
+92            android:name="com.example.android.bluetoothlegatt.graphs.SDNNGraphActivity"
+92-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:63:19-59
+93            android:theme="@style/AppTheme" />
+93-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:64:13-44
+94        <activity
+94-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:65:9-66:46
+95            android:name="com.example.android.bluetoothlegatt.graphs.COVGraphActivity"
+95-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:65:19-58
+96            android:theme="@style/AppTheme" />
+96-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:66:13-44
+97        <activity
+97-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:67:9-68:46
+98            android:name="com.example.android.bluetoothlegatt.graphs.SDSDGraphActivity"
+98-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:67:19-59
+99            android:theme="@style/AppTheme" />
+99-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:68:13-44
+100        <activity
+100-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:69:9-70:46
+101            android:name="com.example.android.bluetoothlegatt.graphs.RMSSDGraphActivity"
+101-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:69:19-60
+102            android:theme="@style/AppTheme" />
+102-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:70:13-44
+103        <activity
+103-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:71:9-72:46
+104            android:name="com.example.android.bluetoothlegatt.graphs.NN50GraphActivity"
+104-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:71:19-59
+105            android:theme="@style/AppTheme" />
+105-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:72:13-44
+106        <activity
+106-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:73:9-74:46
+107            android:name="com.example.android.bluetoothlegatt.graphs.pNN50GraphActivity"
+107-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:73:19-60
+108            android:theme="@style/AppTheme" />
+108-->C:\Users\amani\Desktop\BluetoothLeGatt - Copy\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:74:13-44
+109
+110        <service
+110-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:29:9-35:19
+111            android:name="com.google.firebase.components.ComponentDiscoveryService"
+111-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:30:13-84
+112            android:directBootAware="true"
+112-->[com.google.firebase:firebase-common:19.3.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+113            android:exported="false" >
+113-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:31:13-37
+114            <meta-data
+114-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:32:13-34:85
+115                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+115-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:33:17-109
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-database:19.2.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\7bb723851c4932c3f5470f55a2915491\firebase-database-19.2.0\AndroidManifest.xml:34:17-82
+117            <meta-data
+117-->[com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\0526cb993bcd3b17a19f28f783b8b1d9\play-services-measurement-api-17.2.2\AndroidManifest.xml:30:13-32:85
+118                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+118-->[com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\0526cb993bcd3b17a19f28f783b8b1d9\play-services-measurement-api-17.2.2\AndroidManifest.xml:31:17-139
+119                android:value="com.google.firebase.components.ComponentRegistrar" />
+119-->[com.google.android.gms:play-services-measurement-api:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\0526cb993bcd3b17a19f28f783b8b1d9\play-services-measurement-api-17.2.2\AndroidManifest.xml:32:17-82
+120            <meta-data
+120-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:32:13-34:85
+121                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+121-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:33:17-96
+122                android:value="com.google.firebase.components.ComponentRegistrar" />
+122-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:34:17-82
+123        </service>
+124
+125        <receiver
+125-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:37:9-44:20
+126            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+126-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:38:13-78
+127            android:exported="true"
+127-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:39:13-36
+128            android:permission="com.google.android.c2dm.permission.SEND" >
+128-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:40:13-73
+129            <intent-filter>
+129-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:41:13-43:29
+130                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+130-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:42:17-81
+130-->[com.google.firebase:firebase-iid:20.0.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\14092e63484c408036652bf98e042e26\firebase-iid-20.0.2\AndroidManifest.xml:42:25-78
+131            </intent-filter>
+132        </receiver>
+133
+134        <activity
+134-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\2be5ef2959ea5355d833f1cf7554bfda\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+135            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+135-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\2be5ef2959ea5355d833f1cf7554bfda\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+136            android:exported="false"
+136-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\2be5ef2959ea5355d833f1cf7554bfda\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+137            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+137-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\2be5ef2959ea5355d833f1cf7554bfda\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+138
+139        <provider
+139-->[com.google.firebase:firebase-common:19.3.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+140            android:name="com.google.firebase.provider.FirebaseInitProvider"
+140-->[com.google.firebase:firebase-common:19.3.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+141            android:authorities="com.example.android.bluetoothlegatt.firebaseinitprovider"
+141-->[com.google.firebase:firebase-common:19.3.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+142            android:exported="false"
+142-->[com.google.firebase:firebase-common:19.3.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+143            android:initOrder="100" />
+143-->[com.google.firebase:firebase-common:19.3.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+144
+145        <receiver
+145-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:29:9-33:20
+146            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+146-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:30:13-85
+147            android:enabled="true"
+147-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:31:13-35
+148            android:exported="false" >
+148-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:32:13-37
+149        </receiver>
+150        <receiver
+150-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:34:9-42:20
+151            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+151-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:35:13-100
+152            android:enabled="true"
+152-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:36:13-35
+153            android:exported="true"
+153-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:37:13-36
+154            android:permission="android.permission.INSTALL_PACKAGES" >
+154-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:38:13-69
+155            <intent-filter>
+155-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:39:13-41:29
+156                <action android:name="com.android.vending.INSTALL_REFERRER" />
+156-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:40:17-79
+156-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:40:25-76
+157            </intent-filter>
+158        </receiver>
+159
+160        <service
+160-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:44:9-47:40
+161            android:name="com.google.android.gms.measurement.AppMeasurementService"
+161-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:45:13-84
+162            android:enabled="true"
+162-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:46:13-35
+163            android:exported="false" />
+163-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:47:13-37
+164        <service
+164-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:48:9-52:72
+165            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+165-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:49:13-87
+166            android:enabled="true"
+166-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:50:13-35
+167            android:exported="false"
+167-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:51:13-37
+168            android:permission="android.permission.BIND_JOB_SERVICE" />
+168-->[com.google.android.gms:play-services-measurement:17.2.2] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\e78ea75fc38ff4415d281ae9feb22a4f\play-services-measurement-17.2.2\AndroidManifest.xml:52:13-69
+169
+170        <meta-data
+170-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+171            android:name="com.google.android.gms.version"
+171-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+172            android:value="@integer/google_play_services_version" />
+172-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\amani\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+173    </application>
+174
+175</manifest>
